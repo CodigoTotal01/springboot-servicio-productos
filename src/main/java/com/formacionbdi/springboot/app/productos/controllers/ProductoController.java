@@ -39,6 +39,12 @@ public class ProductoController {
 		Producto producto = productoService.findById(id);
 		//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		producto.setPort(port);
+		//? el tiempo de espera de hyxtic es de solo un segundo :D
+//		try {
+//			Thread.sleep(2000L);
+//		} catch (InterruptedException e) {
+//			throw new RuntimeException(e);
+//		}
 		return producto;
 	}
 
